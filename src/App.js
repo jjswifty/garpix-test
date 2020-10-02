@@ -7,6 +7,7 @@ import { store } from './components/redux/store'
 import { PartnersPage } from './components/PartnersPage/PartnersPage'
 
 export const App = () => {
+
     return (
         <Provider store={store}> 
             <BrowserRouter>
@@ -18,6 +19,7 @@ export const App = () => {
 
                     </div>
                 </div>
+                
             </BrowserRouter>
         </Provider>
     );

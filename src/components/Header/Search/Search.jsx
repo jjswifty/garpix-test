@@ -1,14 +1,35 @@
 import React from 'react'
 import { useState } from 'react'
 import search_icon from './../../../assets/img/search_icon.svg'
+import s from './Search.module.sass'
+import { Modal } from './Modal/Modal'
 
 export const Search = props => {
 
-    const [modalOpen, setModalOpen] = useState(false)
+    const [isModalOpen, setIsModalOpen] = useState(false)
+
+    const onModalClick = () => {
+        setIsModalOpen(true)
+    }
+
+    const onInputBlur = () => {
+        setIsModalOpen(false)
+    }
 
     return (
-        <div>
-            <img src={search_icon} alt="Search icon"></img>
+        <div className={s.container}>
+            <div onClick={() => onModalClick()}>
+                <img src={search_icon} alt="Search icon"></img>
+            </div>
+            {
+                isModalOpen && (
+                    <div className={s.overlay}>
+                        <div className={s.modalContent}>
+                            <Modal onInputBlur={onInputBlur}/>
+                        </div>
+                    </div>
+                )
+            }
         </div>
     )
 }

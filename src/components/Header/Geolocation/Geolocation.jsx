@@ -21,30 +21,31 @@ export const Geolocation = props => {
     return (
         <div>
             <img src={geo_icon} alt="Geolocation icon"/>
-            <span onClick={() => setCitiesOpen(true)}>
+            <span onClick={() => { setCitiesOpen(true); setModalOpen(false) }}>
+                {/* Если пользователь сразу же кликнул по выбору города, закрываем модалку с вопросом и открываем список */}
                 {props.currentCity}
             </span>
-            
+            <div>
             {
-                modalOpen ?
+                modalOpen && (
                 <div className={s.modal}>
                     <span>Ваш город - {props.currentCity}?</span>
                     <button onClick={() => setModalOpen(false)}>Да</button>
-                    <button onClick={() => setCitiesOpen(true)}>Сменить город</button>
-                </div>
-                : null
+                    <button onClick={() => { setCitiesOpen(true); setModalOpen(false)}}> 
+                    {/* Если неправильно определен город - закрываем модалку с вопросом об определении и открываем список */}
+                    Сменить город
+                    </button>
+                </div>)
             }
-
             {
-                citiesOpen ?
+                citiesOpen && (
                 props.cities.map((el, i) => {
                     return (
                         <div onClick={() => setCurrentCity(el)} key={i}> {el} </div>
                     )
-                })
-                : null
+                }))
             }
-            
+            </div>
         </div>
     )
 }
