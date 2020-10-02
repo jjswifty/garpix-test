@@ -13,22 +13,28 @@ export const Header = props => {
 
     return (
         <div className={s.container}>
-            <div className={s.logo}>
-                <img src={spasibo_logo} alt="spasibo logo"></img>
+            <div className={s.content}>
+                <div className={s.logo}>
+                    <img src={spasibo_logo} alt="spasibo logo"></img>
+                </div>
+                <Navigation links={state.links}/>
+                <div className={s.actionsContainer}>
+                    <Geolocation 
+                        currentCity={state.currentCity}
+                        cities={state.cities}
+                    />
+                    <div className={s.searchAndLogin}>
+                        <Search />
+                        {
+                            state.isLogin ? 
+                            <Login login={true} /> 
+                            : <Login login={false} />
+                        }
+                    </div>
+                    
+                </div>
             </div>
-            <Navigation links={state.links}/>
-            <div className={s.container}>
-                <Geolocation 
-                    currentCity={state.currentCity}
-                    cities={state.cities}
-                />
-                <Search />
-                {
-                    state.isLogin ? 
-                    <Login login={true} /> 
-                    : <Login login={false} />
-                }
-            </div>
+            
             
         </div>
     )

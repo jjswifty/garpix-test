@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import s from './Modal.module.sass'
 
 export const Modal = props => {
 
@@ -9,7 +10,13 @@ export const Modal = props => {
     })
 
     return (
-        <input ref={textInput} 
-        onBlur={props.onInputBlur}/>
+        <div className={s.modal}>
+            <input ref={textInput} 
+                onBlur={props.onInputBlur}
+                className={s.modalInput}
+                placeholder='Поиск'
+                onKeyDown={(e) => { if (e.key === 'Enter' || 'Escape') props.onInputBlur() }}
+            />
+        </div>
     )
 }

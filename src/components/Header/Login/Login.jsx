@@ -9,7 +9,7 @@ export const Login = props => {
 
     return (
         props.login ?
-        <button onClick={() => dispatch(unlogin())}>Выйти</button> 
-        : <button onClick={() => dispatch(login())}>Войти</button>
+        <button className={s.button} onClick={() => dispatch(unlogin())}>Выйти</button> 
+        : <button className={s.button} onClick={() => dispatch(login())}>Войти</button>
     )
 }

@@ -12,20 +12,23 @@ export const Search = props => {
         setIsModalOpen(true)
     }
 
-    const onInputBlur = () => {
+    const onInputBlur = (e) => {
         setIsModalOpen(false)
     }
 
     return (
         <div className={s.container}>
-            <div onClick={() => onModalClick()}>
-                <img src={search_icon} alt="Search icon"></img>
+            <div onClick={() => { onModalClick() }} className={s.iconBlock}>
+                <input type="button" disabled={isModalOpen}/>
             </div>
             {
                 isModalOpen && (
-                    <div className={s.overlay}>
-                        <div className={s.modalContent}>
-                            <Modal onInputBlur={onInputBlur}/>
+                    <div>
+                        <div className={s.overlay}></div>
+                        <div className={s.modalContentContainer}>
+                            <div className={s.modalContent}>
+                                <Modal onInputBlur={onInputBlur}/>
+                            </div>
                         </div>
                     </div>
                 )
