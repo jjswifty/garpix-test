@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import search_icon from './../../../assets/img/search_icon.svg'
 import s from './Search.module.sass'
 import { Modal } from './Modal/Modal'
 

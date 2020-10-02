@@ -15,7 +15,7 @@ export const Modal = props => {
                 onBlur={props.onInputBlur}
                 className={s.modalInput}
                 placeholder='Поиск'
-                onKeyDown={(e) => { if (e.key === 'Enter' || 'Escape') props.onInputBlur() }}
+                onKeyDown={(e) => { if (e.key === 'Enter') props.onInputBlur() }}
             />
         </div>
     )
