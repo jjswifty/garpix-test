@@ -5,6 +5,7 @@ import { Header } from './components/Header/Header'
 import { Provider } from 'react-redux'
 import { store } from './components/redux/store'
 import { PartnersPage } from './components/PartnersPage/PartnersPage'
+import { Footer } from './components/Footer/Footer'
 
 export const App = () => {
     return (
@@ -12,14 +13,11 @@ export const App = () => {
             <BrowserRouter>
                 <Header />
                 <div className={s.appWrapper}>
-                    
                     <div className={s.appWrapperContent}>
-
                         <Route path="/Партнеры" render={() => <PartnersPage />}/>
-
                     </div>
                 </div>
-                
+                <Footer />
             </BrowserRouter>
         </Provider>
     );

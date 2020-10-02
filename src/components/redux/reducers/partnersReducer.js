@@ -84,8 +84,72 @@ let initialState = {
         'Все партнеры', 'Популярные', 'Супермаркеты', 'Кафе и рестораны', 'Такси', 
         'Красота', 'Электроника и бытовая техника', 'Зоотовары', 'Кино и театр',
         'Еще категория', 'И еще одна' // <-- добавлены для функционирования раскрытия доп. категорий
-    ] // Захардкодено
+    ], // Захардкодено
+    offers: [
+        {
+            name: 'Технопарк',
+            logo: {
+                large: '',
+                small: ''
+            },
+            bonus: '20% спасибо за технику Electrolux'
+        },
 
+        {
+            name: 'Евросеть',
+            logo: {
+                large: '',
+                small: ''
+            },
+            bonus: '10% спасибо за покупки в черную пятницу'
+        },
+
+        {
+            name: 'М.Видео',
+            logo: {
+                large: '',
+                small: ''
+            },
+            bonus: '15% спасибо для студентов'
+        },
+
+        {
+            name: 'Какая-то компания',
+            logo: {
+                large: '',
+                small: ''
+            },
+            bonus: '10% спасибо за продукцию'
+        },
+
+        {
+            name: 'Еще компания партнер',
+            logo: {
+                large: '',
+                small: ''
+            },
+            bonus: '5% спасибо за все'
+        },
+
+        {
+            name: 'И еще одна компания',
+            logo: {
+                large: '',
+                small: ''
+            },
+            bonus: '2% спасибо за что-то'
+        },
+
+        {
+            name: 'Последняя компания',
+            logo: {
+                large: '',
+                small: ''
+            },
+            bonus: '7% просто потому что "счастливое" число'
+        },
+        
+    ]
 }
 
 export const partnersReducer = (state = initialState, action) => {
@@ -111,3 +175,6 @@ export const partnersReducer = (state = initialState, action) => {
     }
     
 }
+
+export const toggleCharging = () => ({type: TOGGLE_CHARGING})
+export const toggleAccepting = () => ({type: TOGGLE_ACCEPTING})
