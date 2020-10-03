@@ -7,7 +7,7 @@ export const Categories = props => {
     const [isOtherCategoriesVisible, setCategoryVisibility] = useState(false)
 
     return (
-        <div>
+        <div className={s.content}>
             {
                 // Логика такова:
                 // Если по счету в переборе мапа индекс больше 8, то мы этот элемент пушим
@@ -35,11 +35,15 @@ export const Categories = props => {
                     )
                 )
             }
-            <button onClick={ () => { setCategoryVisibility(!isOtherCategoriesVisible) } }> 
-                {
-                    isOtherCategoriesVisible ? 'x' : '...'
-                }
-            </button>
+            <div className={s.categoriesItem}>
+                <button className={s.btnMore}
+                    onClick={ () => { setCategoryVisibility(!isOtherCategoriesVisible) } }> 
+                    {
+                        isOtherCategoriesVisible ? 'x' : '• • •' 
+                    }
+                </button>
+            </div>
+            
         </div>
     )
 }

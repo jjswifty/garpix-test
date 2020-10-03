@@ -4,6 +4,8 @@ import s from './Geolocation.module.sass'
 import { setCity } from './../../redux/reducers/headerReducer'
 import { useDispatch } from 'react-redux'
 import geo_icon from './../../../assets/img/geo_icon.png'
+import { ChangeCityModal } from './Modals/ChangeCityModal/ChangeCityModal'
+import { CityListModal } from './Modals/CityListModal/CityListModal'
 
 export const Geolocation = props => {
 
@@ -29,28 +31,20 @@ export const Geolocation = props => {
             </div>
             <div className={s.modals}>
             {
-                modalOpen && (
-                <div className={s.modal}>
-                    <span>Ваш город - {props.currentCity}?</span>
-                    <div className={s.modalButtons}>
-                        <button onClick={() => setModalOpen(false)} className={s.yesButton}>Да</button>
-                        <button onClick={() => { setCitiesOpen(true); setModalOpen(false)}} className={s.changeButton}> 
-                        {/* Если неправильно определен город - закрываем модалку с вопросом об определении и открываем список */}
-                        Сменить город
-                        </button>
-                    </div>
-                </div>)
+                modalOpen && <ChangeCityModal 
+                setModalOpen={setModalOpen} 
+                setCitiesOpen={setCitiesOpen}
+                currentCity={props.currentCity}
+                />
             }
                 
             {
                 citiesOpen && (
-                    <div className={s.cityModal}>
-                    {
-                        props.cities.map((el, i) => {
-                            return <div className={s.city}onClick={() => setCurrentCity(el)} key={i}> {el} </div>
-                        })
-                    }
-                </div>)
+                    <CityListModal cities={props.cities} 
+                    currentCity={props.currentCity} 
+                    setCurrentCity={setCurrentCity} 
+                    setCitiesOpen={setCitiesOpen}/>
+                )
             }
                 
             </div>
