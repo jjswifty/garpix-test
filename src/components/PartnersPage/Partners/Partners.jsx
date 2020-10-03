@@ -26,8 +26,11 @@ export const Partners = props => {
                     Принимают спасибо
                 </p>
             </div>
-            <div className={s.cardsContainer}>
-                <PartnersCards partners={props.partners}/>
+            <div>
+                <PartnersCards partners={
+                    isPayingSpasibo ? props.partners.filter(e => e.isChargingSpasibo) 
+                    : props.partners.filter(e => e.isAcceptingSpasibo)
+                }/>
             </div>
         </div>
     )

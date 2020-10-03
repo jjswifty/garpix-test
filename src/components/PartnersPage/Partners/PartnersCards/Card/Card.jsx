@@ -1,7 +1,9 @@
 import React from 'react'
 import s from './Card.module.sass'
 
-export const Card = props => (
+export const Card = props => {
+
+    return (
     <div className={s.card}>
         <div>
             <h3>{props.e.spasiboPercent}%</h3>
@@ -12,4 +14,4 @@ export const Card = props => (
         {/* затычки просто для показа */}
         <p>{props.e.name}</p>
     </div>
-)
+)}

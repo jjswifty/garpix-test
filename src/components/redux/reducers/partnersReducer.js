@@ -9,7 +9,8 @@ let initialState = {
             name: 'М.Видео',
             spasiboPercent: '1,5',
             isChargingSpasibo: true, // Выставлено рандомно
-            isAcceptingSpasibo: false,
+            isAcceptingSpasibo: true,
+            id: 0
         },
 
         {
@@ -17,41 +18,47 @@ let initialState = {
             spasiboPercent: '3',
             isChargingSpasibo: true,
             isAcceptingSpasibo: true,
+            id: 1
         },
 
         {
             name: 'Холодильник.ру',
             spasiboPercent: '4,5',
-            isAcceptingSpasibo: true,
-            isChargingSpasibo: false,
+            isChargingSpasibo: true,
+            isAcceptingSpasibo: false,
+            id: 2
         },
 
         {
             name: 'BORK',
             spasiboPercent: 'От 1,5',
             isChargingSpasibo: true,
-            isAcceptingSpasibo: true,
+            isAcceptingSpasibo: false,
+            id: 3
         },
 
         {
             name: 'Евросеть',
             spasiboPercent: '1,5',
-            isChargingSpasibo: false,
-            isAcceptingSpasibo: true,
+            isChargingSpasibo: true,
+            isAcceptingSpasibo: false,
+            id: 4
         },
 
         {
             name: 'Еще партнер',
             spasiboPercent: '1',
-            isChargingSpasibo: false,
+            isChargingSpasibo: true,
             isAcceptingSpasibo: true,
+            id: 5
         },
 
         {
             name: 'Еще один',
             spasiboPercent: '5',
-            isChargingSpasibo: false,
+            isChargingSpasibo: true,
             isAcceptingSpasibo: true,
+            id: 6
         },
 
         {
@@ -59,13 +66,15 @@ let initialState = {
             spasiboPercent: '3',
             isChargingSpasibo: true,
             isAcceptingSpasibo: false,
+            id: 7
         },
 
         {
             name: 'Последний',
             spasiboPercent: '2',
-            isChargingSpasibo: false,
+            isChargingSpasibo: true,
             isAcceptingSpasibo: true,
+            id: 8
         }
     ],
     // Флаги начисления и принятия спасибо бонусов
