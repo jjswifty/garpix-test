@@ -1,8 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Navigation } from '../Header/Navigation/Navigation'
 import s from './Footer.module.sass'
 
 export const Footer = props => {
+
+    const links = useSelector(state => state.headerReducer.links)
+    
 
     return (
         <div className={s.container}>
@@ -18,7 +22,7 @@ export const Footer = props => {
             </div>
             <div>
                 
-                <Navigation />
+                <Navigation links={ links } />
                 
                 <div>
                     <div>

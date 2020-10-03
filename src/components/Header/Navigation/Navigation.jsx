@@ -4,6 +4,8 @@ import s from './Navigation.module.sass'
 
 export const Navigation = props => {
 
+    console.log(props)
+
     return (
         <nav className={s.nav}>
             {

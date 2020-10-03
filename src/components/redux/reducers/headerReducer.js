@@ -1,7 +1,6 @@
 const LOGIN = 'LOGIN'
 const UNLOGIN = 'UNLOGIN' // Можно было сделать через отрицание, но мне кажется так безопаснее
 const SET_CITY = 'SET_CITY'
-const TOGGLE_SEARCH_MODAL = 'TOGGLE_SEARCH_MODAL'
 
 let initialState = {
     cities: ['Санкт-Петербург', 'Иваново', 'Москва'], // Хардкод
@@ -9,7 +8,6 @@ let initialState = {
         'Отели', 'Каршеринг', 'Театры', 'Страхование', 'Как подключиться', 'Партнеры'],
     isLogin: false,
     currentCity: 'Санкт-Петербург',
-    isSearchModalOpen: false,
 }
 
 export const headerReducer = (state = initialState, action) => {
@@ -34,13 +32,6 @@ export const headerReducer = (state = initialState, action) => {
             return {
                 ...state,
                 currentCity: action.city
-            }
-        }
-
-        case (TOGGLE_SEARCH_MODAL): {
-            return {
-                ...state,
-                isSearchModalOpen: !state.isSearchModalOpen
             }
         }
 

@@ -8,7 +8,6 @@ let initialState = {
         {
             name: 'М.Видео',
             spasiboPercent: '1,5',
-            logo: '', // Ну а здесь будут ссылки, а не локальные лого
             isChargingSpasibo: true, // Выставлено рандомно
             isAcceptingSpasibo: false,
         },
@@ -16,7 +15,6 @@ let initialState = {
         {
             name: 'Бургер Кинг',
             spasiboPercent: '3',
-            logo: '',
             isChargingSpasibo: true,
             isAcceptingSpasibo: true,
         },
@@ -24,7 +22,6 @@ let initialState = {
         {
             name: 'Холодильник.ру',
             spasiboPercent: '4,5',
-            logo: '',
             isAcceptingSpasibo: true,
             isChargingSpasibo: false,
         },
@@ -32,7 +29,6 @@ let initialState = {
         {
             name: 'BORK',
             spasiboPercent: 'От 1,5',
-            logo: '',
             isChargingSpasibo: true,
             isAcceptingSpasibo: true,
         },
@@ -40,7 +36,6 @@ let initialState = {
         {
             name: 'Евросеть',
             spasiboPercent: '1,5',
-            logo: '',
             isChargingSpasibo: false,
             isAcceptingSpasibo: true,
         },
@@ -48,7 +43,6 @@ let initialState = {
         {
             name: 'Еще партнер',
             spasiboPercent: '1',
-            logo: '',
             isChargingSpasibo: false,
             isAcceptingSpasibo: true,
         },
@@ -56,7 +50,6 @@ let initialState = {
         {
             name: 'Еще один',
             spasiboPercent: '5',
-            logo: '',
             isChargingSpasibo: false,
             isAcceptingSpasibo: true,
         },
@@ -64,7 +57,6 @@ let initialState = {
         {
             name: 'И еще один',
             spasiboPercent: '3',
-            logo: '',
             isChargingSpasibo: true,
             isAcceptingSpasibo: false,
         },
@@ -72,7 +64,6 @@ let initialState = {
         {
             name: 'Последний',
             spasiboPercent: '2',
-            logo: '',
             isChargingSpasibo: false,
             isAcceptingSpasibo: true,
         }
@@ -88,64 +79,36 @@ let initialState = {
     offers: [
         {
             name: 'Технопарк',
-            logo: {
-                large: '',
-                small: ''
-            },
             bonus: '20% спасибо за технику Electrolux'
         },
 
         {
             name: 'Евросеть',
-            logo: {
-                large: '',
-                small: ''
-            },
             bonus: '10% спасибо за покупки в черную пятницу'
         },
 
         {
             name: 'М.Видео',
-            logo: {
-                large: '',
-                small: ''
-            },
             bonus: '15% спасибо для студентов'
         },
 
         {
             name: 'Какая-то компания',
-            logo: {
-                large: '',
-                small: ''
-            },
             bonus: '10% спасибо за продукцию'
         },
 
         {
             name: 'Еще компания партнер',
-            logo: {
-                large: '',
-                small: ''
-            },
             bonus: '5% спасибо за все'
         },
 
         {
             name: 'И еще одна компания',
-            logo: {
-                large: '',
-                small: ''
-            },
             bonus: '2% спасибо за что-то'
         },
 
         {
             name: 'Последняя компания',
-            logo: {
-                large: '',
-                small: ''
-            },
             bonus: '7% просто потому что "счастливое" число'
         },
         
