@@ -1,9 +1,23 @@
 .container
     max-height: 300px
-
+    @media screen and ( max-width: 550px )
+        max-height: none
+        height: auto
+    padding: 0 10px
     background: white
     .containerContent
-        max-width: 1170px
+        @media screen and ( max-width: 550px )
+            flex-direction: column
+        .politicMobile
+            display: none
+            font:
+                size: 14px
+                family: Geometria
+            line-height: 16px
+            color: rgba(0,0,0,0.5)
+            @media screen and ( max-width: 550px )
+                display: block
+        max-width: 1150px
         margin: 0 auto
         padding: 40px 0
         height: 100%
@@ -11,7 +25,7 @@
         .contactsContainer
             div
                 p
-                    min-width: 278px
+                    width: 278px
                     padding-right: 20px
                     font:
                         size: 14px
@@ -29,8 +43,13 @@
                     margin:
                         bottom: 30px
                         top: 55px
+                    @media screen and ( max-width: 550px )
+                        margin: 15px 0
         .social
-            div
+            .politic
+                @media screen and ( max-width: 550px )
+                    display: none
+    
                 p
                     font:
                         size: 14px
@@ -48,13 +67,26 @@
                 display: flex
                 justify-content: space-between
                 margin: 30px 0
+                @media screen and ( max-width: 550px )
+                    flex-direction: column
+                    justify-content: center
+
                 div
                     img
                         cursor: pointer
+                        
                 .download
                     img
                         margin-right: 10px
+                        
                 .media
+                    @media screen and ( max-width: 550px )
+                        margin-top: 5px
                     img
                         margin-left: 10px
                         border-radius: 8px
+                        @media screen and ( max-width: 550px )
+                            margin:
+                                left: 0
+                                right: 10px
+                        
