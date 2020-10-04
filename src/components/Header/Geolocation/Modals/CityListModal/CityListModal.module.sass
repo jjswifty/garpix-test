@@ -18,17 +18,37 @@
     border-radius: 10px
     padding: 5px
     font-size: 14px
-    input
-        border: 1px solid #00D36D
-            radius: 8px
-        outline: none
-        background: rgba(0,0,0,0)
-        margin: 0 auto
-        width: 90%
-        height: 37px
-        font-size: 14px
+    .cityBox
+        position: relative
+        z-index: 20
+        .city
+            cursor: pointer
+            
+            border: none
+                radius: 8px
+            outline: none
+            background: rgba(0,0,0,0)
+            margin: 0 auto
+            width: 90%
+            height: 37px
+            font:
+                family: Geometria
+                size: 14px
+            display: block
+        &::after
+            content: ''
+            display: block
+            width: 60%
+            height: 1px
+            background: #00D36D
+            position: absolute
+            bottom: 5px
+            left: 20%
+            transform: scale(0)
+            transition: all .3s
+        &:hover::after
+            transform: scale(1)
+            
+            
+            
         
-        
-
-.city
-    cursor: pointer

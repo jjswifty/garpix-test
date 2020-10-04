@@ -9,13 +9,15 @@ export const CityListModal = props => {
             {
                 props.cities.map((el, i) => {
                     if (el !== props.currentCity) return (
-                    <input type="button"
-                      
-                        className={s.city}
-                        onClick={() => props.setCurrentCity(el)} key={i}
-                        value={el} 
-                        onBlur={() => { props.setCitiesOpen(false) }}
-                    /> )
+                        <div className={s.cityBox}>
+                            <input type="button"
+                                className={s.city}
+                                onClick={() => props.setCurrentCity(el)} key={i}
+                                value={el} 
+                                onBlur={() => { props.setCitiesOpen(false) }}
+                            /> 
+                        </div>
+                    )
                     else return null
                 })
             }
