@@ -1,11 +1,25 @@
 .item
-    a.active
-        opacity: 100%
-        text-decoration: underline
     a
+        position: relative
         opacity: 50%
         text-decoration: none
         color: black
+        font:
+            family: Geometria
+            size: 18px
+        line-height: 40px
+
+    a.active
+        opacity: 100%
+        &::after
+            content: ''
+            width: 100%
+            position: absolute
+            height: 1px
+            background: rgba(0,0,0,0.5)
+            left: 0
+            bottom: 0
+    
 
 .nav
     display: flex
@@ -16,7 +30,7 @@
     height: 100%
     .item
         padding-right: 10px
-        padding-top: 13px
+        
         margin: 0
         
         

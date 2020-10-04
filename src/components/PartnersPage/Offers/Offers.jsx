@@ -8,36 +8,25 @@ export const Offers = props => {
     const [isHiddenOffers, setOffersVisibility] = useState(true)
     const hiddenOffers = []
     
-    const cards = [
-        ...props.offers.map((e, i) => (   
-            <OfferCard 
-                key={i}
-                randomNumForImg={props.randomNumForImg}
-                offerImages={offerImages}
-                offerMiniatures={offerMiniatures}
-                i={i}
-                e={e}
-            />    
-            )
-        )
-    ]
+    const cards = props.offers.map((e, i) => {
+        const card = <OfferCard 
+            key={i} i={i} e={e}
+            randomNumForImg={props.randomNumForImg}
+            offerImages={offerImages}
+            offerMiniatures={offerMiniatures} />    
+        if (i < 3) return card
+        else hiddenOffers.push(card)
+    })
+
     return (
         <div className={s.container}>
             <h2>3 предложения в категории «Электроника и бытовая техника»</h2>
             <div className={s.offersList}>
-                {
-                    cards.filter((e, i) => {
-                        if (i < 3) return e
-                        else hiddenOffers.push(e)
-                    })
-                }
-
+                { cards }
                 { !isHiddenOffers && hiddenOffers }
             </div>
             <button onClick={() => setOffersVisibility(!isHiddenOffers)}>
-                {
-                    `Еще ${hiddenOffers.length} предложения`
-                }
+                { isHiddenOffers ? `Еще ${hiddenOffers.length} предложения` : 'Закрыть' }
             </button>
         </div>
     )
