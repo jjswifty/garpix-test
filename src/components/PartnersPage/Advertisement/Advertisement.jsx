@@ -12,8 +12,10 @@ export const Advertisement = props => {
                 <div className={s.discountForBonuses}>
                     {imgToDiv(discountForBonuses)}
                 </div>
-                <div className={s.discountTitle}>
+                <div className={s.textWrap}>
+                    <div className={s.textWrapLeftMask} />
                     <p>Скидки за бонусы</p>
+                    <div className={s.textWrapRightMask} />
                 </div>
             </div>
             <div className={s.centerContainer}>
@@ -21,16 +23,20 @@ export const Advertisement = props => {
                     <div className={s.bigPercent}>
                         {imgToDiv(bigPercent)}
                     </div>
-                    <div className={s.bigPercentTitle}>
+                    <div className={s.textWrap}>
+                        <div className={s.textWrapLeftMask} />
                         <p>Большой % начисления</p>
+                        <div className={s.textWrapRightMask} />
                     </div>
                 </div>
                 <div className={s.profitCouponsGroup}>
                     <div className={s.profitCoupons}>
                         {imgToDiv(profitCoupons)}
                     </div>
-                    <div className={s.profitTitle}>
+                    <div className={s.textWrap}>
+                        <div className={s.textWrapLeftMask} />
                         <p>Выгодные купоны</p>
+                        <div className={s.textWrapRightMask} />
                     </div>
                 </div>
             </div>
@@ -38,8 +44,10 @@ export const Advertisement = props => {
                 <div className={s.personal}>
                     {imgToDiv(personal)}
                 </div>
-                <div className={s.personalTitle}>
+                <div className={s.textWrap}>
+                    <div className={s.textWrapLeftMask} />
                     <p>Персональное исходя из трат</p>
+                    <div className={s.textWrapRightMask} />
                 </div>
             </div>
         </div>
