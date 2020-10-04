@@ -17,6 +17,8 @@ import BOOKING_CAR from './../../../assets/img/advertisement/BookingCar.png'
 import SBER_INSURANCE from './../../../assets/img/advertisement/SberInsurance.png'
 import TRIPSTER from './../../../assets/img/advertisement/Tripster.png'
 
+// ну так то картинки приходить с сервера должны но я тут пока сделал
+
 export const discountForBonuses = [
     {
         name: 'Бургер Кинг скидка за бонусы',
