@@ -7,6 +7,8 @@
         font:
             family: Geometria
             size: 18px
+        @media screen and ( max-width: 1110px )
+            font-size: 14px
         line-height: 40px
 
     a.active
@@ -22,18 +24,19 @@
     
 .nav
     display: flex
+    @media screen and ( max-width: 1170px )
+        display: none
     flex-wrap: wrap
     font-size: 18px
     max-width: 700px
     align-items: flex-start
     height: 100%
-    @media screen and ( max-width: 1110px )
-        display: none
-        
     .item
         padding-right: 10px
-        
         margin: 0
+
+
+
         
         
         

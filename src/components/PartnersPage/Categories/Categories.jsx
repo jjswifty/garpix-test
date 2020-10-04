@@ -42,6 +42,7 @@ export const Categories = props => {
                         isOtherCategoriesVisible ? 'x' : '• • •' 
                     }
                 </button>
+                
             </div>
             
         </div>

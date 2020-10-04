@@ -12,6 +12,8 @@
     justify-content: space-between
     align-items: center
     padding: 17px 0
+    .logo
+        margin: 20px
 
 .actionsContainer
     width: 200px 
@@ -22,13 +24,18 @@
     flex-direction: column
     justify-content: space-between
     padding-top: 10px
-    @media screen and ( max-width: 410px )
+    @media screen and ( max-width: 440px )
         padding-left: 0
-
     .searchAndLogin
         display: flex
         justify-content: space-between
-        @media screen and ( max-width: 410px )
+        @media screen and ( max-width: 440px )
             justify-content: flex-end
         padding-left: 5px
         align-items: center
+
+.navMobile
+    display: none
+    @media screen and ( max-width: 1170px )
+        display: block
+        

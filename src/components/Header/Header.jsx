@@ -6,6 +6,7 @@ import { Login } from './Login/Login';
 import { Geolocation } from './Geolocation/Geolocation'
 import { Search } from './Search/Search'
 import spasibo_logo from './../../assets/img/spasibo_logo.png'
+import { NavigationMobile } from './Navigation/NavigationMobile/NavigationMobile';
 
 export const Header = props => {
 
@@ -17,7 +18,8 @@ export const Header = props => {
                 <div className={s.logo}>
                     <img src={spasibo_logo} alt="spasibo logo"></img>
                 </div>
-                <Navigation links={state.links}/>
+                <Navigation className={s.nav} links={state.links} />
+                
                 <div className={s.actionsContainer}>
                     <Geolocation 
                         currentCity={state.currentCity}
@@ -34,7 +36,9 @@ export const Header = props => {
                     
                 </div>
             </div>
-            
+            <NavigationMobile className={s.navMobile} 
+                isMobileMenuOpen={state.isMobileMenuOpen}
+                links={state.links} />
             
         </div>
     )

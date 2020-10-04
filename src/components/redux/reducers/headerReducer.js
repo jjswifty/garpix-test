@@ -1,6 +1,7 @@
 const LOGIN = 'LOGIN'
 const UNLOGIN = 'UNLOGIN' // Можно было сделать через отрицание, но мне кажется так безопаснее
 const SET_CITY = 'SET_CITY'
+const TOGGLE_MOBILE_OPEN = 'TOGGLE_MOBILE_OPEN'
 
 let initialState = {
     cities: ['Санкт-Петербург', 'Иваново', 'Москва'], // Хардкод
@@ -8,6 +9,7 @@ let initialState = {
         'Отели', 'Каршеринг', 'Театры', 'Страхование', 'Как подключиться', 'Партнеры'],
     isLogin: false,
     currentCity: 'Санкт-Петербург',
+    isMobileMenuOpen: false,
 }
 
 export const headerReducer = (state = initialState, action) => {
@@ -35,6 +37,13 @@ export const headerReducer = (state = initialState, action) => {
             }
         }
 
+        case (TOGGLE_MOBILE_OPEN): {
+            return {
+                ...state,
+                isMobileMenuOpen: !state.isMobileMenuOpen
+            }
+        }
+
         default:
             return state
     }
@@ -44,3 +53,4 @@ export const headerReducer = (state = initialState, action) => {
 export const setCity = city => ({ type: SET_CITY, city }) 
 export const login = () => ({ type: LOGIN })
 export const unlogin = () => ({ type: UNLOGIN })
+export const toggleMobileOpen = () => ({type: TOGGLE_MOBILE_OPEN})
