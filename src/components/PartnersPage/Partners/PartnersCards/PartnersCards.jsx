@@ -33,9 +33,10 @@ export const PartnersCards = props => {
                     )
                 }
             </div>
-            <div>
+            <div className={s.btnContainer}>
             {
-            hiddenPartners.length > 0 && <button
+                hiddenPartners.length > 0 && <button
+                    className={s.btnShowMore}
                     onClick={() => { setCategoryVisibility(!isOtherPartnersVisible) }}>
                     {
                          isOtherPartnersVisible ? 'Закрыть' : `Ещё ${hiddenPartners.length} партнёра`
