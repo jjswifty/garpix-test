@@ -48,16 +48,19 @@ export const bigPercent = [
     {
         name: 'Будь здоров большой % начисления',
         src: BE_HEALTHY, 
+        percent: 3,
     },
 
     {
         name: 'Пятёрочка большой % начисления',
         src: FIVE, 
+        percent: 1.5,
     },
 
     {
         name: 'Литрес большой % начисления',
         src: LITRES, 
+        percent: 5,
     },
 ]
 

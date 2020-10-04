@@ -4,7 +4,13 @@ import { discountForBonuses, bigPercent, profitCoupons, personal } from './adIma
 
 export const Advertisement = props => {
 
-    const imgToDiv = array => array.map((e, i) => <img src={e.src} alt={e.src} key={i} />)
+    const imgToDiv = array => array.map((e, i) => (
+        <div>
+            <img src={e.src} alt={e.src} key={i} />
+            { e.percent && <div className={s.percent}><p>{e.percent}%</p></div>}
+        </div>
+        )
+    )
 
     return (
         <div className={s.container}>
