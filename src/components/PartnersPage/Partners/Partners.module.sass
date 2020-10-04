@@ -11,10 +11,12 @@
     cursor: pointer
     appearance: none
     transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2)
+    z-index: 1
 
 .toggleButton::after 
     content: ""
     position: absolute
+    z-index: 2
     left: 3px
     top: 1.5px
     width: 18px
@@ -27,9 +29,11 @@
 .toggleButton:checked::after 
     transform: translateX(calc(100% + 2px))
     background-color: #fff
+    z-index: 2
 
 .toggleButton:checked 
     background-color: #00D36D
+    z-index: 2
 
 .green
     color: #00D36D
