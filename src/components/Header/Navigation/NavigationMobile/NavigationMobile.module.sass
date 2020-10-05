@@ -5,33 +5,63 @@
     height: 100vh
     top: 0px
     left: 0px
-    z-index: 1000
+    z-index: 8
+    background: white
     @media screen and ( max-width: 1170px )
         display: flex
-    .navMobile
-        background: white
-        width: 100%
-        display: flex
         flex-direction: column
-        align-items: center
         justify-content: center
-        .item
-            padding: 10px
-            color: black
-            a
-                position: relative
-                text-decoration: none
+    .actionsContainer
+        width: 100%
+        position: fixed
+        top: 0
+        right: 0
+        z-index: 15
+        
+        .actions
+            position: absolute
+            display: flex
+            top: 0
+            right: 0
+            padding:
+                top: 30px
+                right: 15px 
+            align-items: center
+            div
+                padding: 0 5px
+            
+                
+    .searchAndNav
+        position: relative
+        z-index: 5
+        .search
+            width: 100%
+            display: flex
+            justify-content: flex-end
+        .navMobile
+            
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            .item
+                padding: 10px
                 color: black
-                font-size: 20px
-            a.active
-                &::after
-                    content: ''
-                    width: 100%
-                    position: absolute
-                    height: 1px
-                    background: rgba(0,0,0,0.5)
-                    left: 0
-                    bottom: 0
+                a
+                    position: relative
+                    text-decoration: none
+                    color: black
+                    font-size: 20px
+                a.active
+                    &::after
+                        content: ''
+                        width: 100%
+                        position: absolute
+                        height: 1px
+                        background: rgba(0,0,0,0.5)
+                        left: 0
+                        bottom: 0
 .burger
     display: none
     @media screen and ( max-width: 1170px )

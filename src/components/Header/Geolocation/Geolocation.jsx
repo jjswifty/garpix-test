@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import s from './Geolocation.module.sass'
 import { setCity } from './../../redux/reducers/headerReducer'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import geo_icon from './../../../assets/img/geo_icon.png'
 import { ChangeCityModal } from './Modals/ChangeCityModal/ChangeCityModal'
 import { CityListModal } from './Modals/CityListModal/CityListModal'
@@ -14,6 +14,9 @@ export const Geolocation = props => {
     const [modalOpen, setModalOpen] = useState(true)
     const [citiesOpen, setCitiesOpen] = useState(false)
 
+    const isMobileMenuOpen = useSelector(state => state.headerReducer.isMobileMenuOpen)
+    const isCitySelected = useSelector(state => state.headerReducer.isCitySelected)
+    
     const setCurrentCity = el => {
         dispatch(setCity(el))
         setModalOpen(false)
@@ -31,10 +34,11 @@ export const Geolocation = props => {
             </div>
             <div className={s.modals}>
             {
-                modalOpen && <ChangeCityModal 
+                (!isCitySelected && modalOpen) && <ChangeCityModal 
                 setModalOpen={setModalOpen} 
                 setCitiesOpen={setCitiesOpen}
                 currentCity={props.currentCity}
+                isMobileMenuOpen={isMobileMenuOpen}
                 />
             }
                 

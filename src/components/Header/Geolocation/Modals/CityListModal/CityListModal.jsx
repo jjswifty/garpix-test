@@ -9,7 +9,7 @@ export const CityListModal = props => {
             {
                 props.cities.map((el, i) => {
                     if (el !== props.currentCity) return (
-                        <div className={s.cityBox}>
+                        <div className={s.cityBox} key={i}>
                             <input type="button"
                                 className={s.city}
                                 onClick={() => props.setCurrentCity(el)} key={i}

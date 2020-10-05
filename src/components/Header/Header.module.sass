@@ -12,7 +12,11 @@
     justify-content: space-between
     align-items: center
     padding: 17px 0
+    @media screen and ( max-width: 1170px )
+        justify-content: flex-end
     .logo
+        @media screen and ( max-width: 1170px )
+            margin: 10px
         margin: 20px
         @media screen and ( max-width: 400px )
             margin: 3px
@@ -24,6 +28,8 @@
             
 
 .actionsContainer
+    @media screen and ( max-width: 1170px )
+        display: none
     width: 200px 
     padding-left: 50px
     line-height: 40px

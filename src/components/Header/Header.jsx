@@ -19,7 +19,6 @@ export const Header = props => {
                     <img src={spasibo_logo} alt="spasibo logo"></img>
                 </div>
                 <Navigation className={s.nav} links={state.links} />
-                
                 <div className={s.actionsContainer}>
                     <Geolocation 
                         currentCity={state.currentCity}
@@ -33,13 +32,13 @@ export const Header = props => {
                             : <Login login={false} />
                         }
                     </div>
-                    
                 </div>
             </div>
             <NavigationMobile className={s.navMobile} 
                 isMobileMenuOpen={state.isMobileMenuOpen}
-                links={state.links} />
-            
+                links={state.links} isLogin={state.isLogin}
+                currentCity={state.currentCity}
+                cities={state.cities}/>
         </div>
     )
 }

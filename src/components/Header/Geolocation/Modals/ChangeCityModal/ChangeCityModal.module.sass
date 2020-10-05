@@ -17,6 +17,8 @@
     padding: 5px
     font-size: 14px
     z-index: 10
+    @media screen and ( max-width: 1170px )
+        justify-content: center
     &::before
        content: ''
        display: block
@@ -27,9 +29,13 @@
        position: absolute
        top: -7px
        right: 20px
+       @media screen and ( max-width: 1170px )
+           right: 80px
        transform: rotate(45deg)
     span
         margin: 0 auto
+        @media screen and ( max-width: 1170px )
+            margin: 5px auto
     .modalButtons
         display: flex
         justify-content: space-between
@@ -49,4 +55,3 @@
             color: #00D36D
             background-color: white
             border: 2px solid #00D36D
-    
