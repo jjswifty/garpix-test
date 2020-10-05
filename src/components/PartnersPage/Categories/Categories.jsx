@@ -39,7 +39,7 @@ export const Categories = props => {
                 <button className={s.btnMore}
                     onClick={ () => { setCategoryVisibility(!isOtherCategoriesVisible) } }> 
                     {
-                        isOtherCategoriesVisible ? 'x' : '• • •' 
+                        isOtherCategoriesVisible ? 'x' : '• • •' // Это символы, отображаться будет везде
                     }
                 </button>
                 
