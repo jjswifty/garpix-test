@@ -7,7 +7,7 @@ export const Offers = props => {
 
     const [isHiddenOffers, setOffersVisibility] = useState(true)
     const hiddenOffers = []
-    
+    // Здесь применил другой алгоритм. Кажется, он лучше, чем в Categories и Partners
     const cards = props.offers.map((e, i) => {
         const card = <OfferCard 
             key={i} i={i} e={e}

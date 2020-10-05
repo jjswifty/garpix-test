@@ -44,8 +44,6 @@ export const PartnersCards = props => {
                 </button>
             }   
             </div>
-            
         </div>
-
     )
 }

@@ -42,9 +42,7 @@ export const Categories = props => {
                         isOtherCategoriesVisible ? 'x' : '• • •' // Это символы, отображаться будет везде
                     }
                 </button>
-                
-            </div>
-            
+            </div> 
         </div>
     )
 }

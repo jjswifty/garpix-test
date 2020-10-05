@@ -38,6 +38,16 @@
             width: 100%
             display: flex
             justify-content: flex-end
+            position: relative
+            &::after
+                left: 15%
+                width: 70%
+                height: 1px
+                content: ''
+                position: absolute
+                bottom: -10px
+                
+                background: rgba(0,0,0,0.5)
         .navMobile
             
             width: 100%
