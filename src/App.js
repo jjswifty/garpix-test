@@ -7,6 +7,7 @@ import { store } from './components/redux/store'
 import { PartnersPage } from './components/PartnersPage/PartnersPage'
 import { Footer } from './components/Footer/Footer'
 import { NotFound } from './components/NotFound/NotFound'
+import { PromoPage } from './components/PromoPage/PromoPage'
 
 export const App = () => {
     return (
@@ -16,8 +17,9 @@ export const App = () => {
                 <div className={s.appWrapper}>
                     <div className={s.appWrapperContent}>
                     <Switch>
-                        <Route exact path='/Партнеры' component={PartnersPage} />
-                        <Route path="/404" component={NotFound} />
+                        <Route exact path='/Партнеры' render={() => <PartnersPage />} />
+                        <Route exact path='/promo' render={() => <PromoPage />}  />
+                        <Route path="/404" render={() => <NotFound />} />
                         <Redirect to="/404" />
                     </Switch>
                     </div>

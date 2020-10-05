@@ -15,7 +15,7 @@ export const Offers = props => {
             offerImages={offerImages}
             offerMiniatures={offerMiniatures} />    
         if (i < 3) return card
-        else hiddenOffers.push(card)
+        else { hiddenOffers.push(card); return null }
     })
 
     return (

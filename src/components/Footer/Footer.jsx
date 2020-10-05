@@ -9,6 +9,7 @@ import ok from './../../assets/img/footer/ok.svg'
 import fb from './../../assets/img/footer/fb.svg'
 import vk from './../../assets/img/footer/vk.svg'
 import inst from './../../assets/img/footer/inst.svg'
+import { NavLink } from 'react-router-dom'
 
 
 export const Footer = props => {
@@ -45,10 +46,19 @@ export const Footer = props => {
                         </div>
                     </div>
                     <div className={s.politic}>
-                        <p>Политика АО «ЦПЛ» в отношении обработки персональных данных и Согласие на обработку данных участника Программы «Спасибо от Сбербанка»</p>
+                        <p>
+                            <NavLink className={s.politicLink} to="/politic">Политика</NavLink> АО «ЦПЛ» в отношении 
+                            обработки персональных данных и <NavLink className={s.politicLink} to="/datapolitic">Согласие</NavLink> на 
+                            обработку данных участника Программы «Спасибо от Сбербанка»
+                        </p>
+                        
                     </div>
                 </div>
-                <p className={s.politicMobile}>Политика АО «ЦПЛ» в отношении обработки персональных данных и Согласие на обработку данных участника Программы «Спасибо от Сбербанка»</p>
+                <p className={s.politicMobile}>
+                    <NavLink className={s.politicLink} to="/politic">Политика</NavLink> АО «ЦПЛ» в отношении 
+                    обработки персональных данных и <NavLink className={s.politicLink} to="/datapolitic">Согласие</NavLink> на 
+                    обработку данных участника Программы «Спасибо от Сбербанка»
+                </p>
             </div>
         </div>
     )

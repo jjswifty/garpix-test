@@ -55,6 +55,18 @@
                         family: Geometria
                     line-height: 16px
                     color: rgba(0,0,0,0.5)
+                    a
+                        position: relative
+                        text-decoration: none
+                        color: inherit
+                        &::after
+                            content: ''
+                            width: 100%
+                            position: absolute
+                            height: 1px
+                            background: rgba(0,0,0,0.5)
+                            left: 0
+                            bottom: 0
             nav
                 height: auto
                 max-width: 850px
