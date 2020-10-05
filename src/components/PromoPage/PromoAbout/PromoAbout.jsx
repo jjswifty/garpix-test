@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './PromoAbout.module.sass'
 import notebook from './../../../assets/img/promo/notebook.png'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export const PromoAbout = props => {
 

@@ -9,8 +9,8 @@ import map from './../../../assets/img/promo/map.png'
 export const PromoContacts = props => {
 
     // Ну а так должно прийти по пропсам с серва
-    const card = new Array(3)
-    card.fill(
+    const cards = new Array(3)
+    cards.fill(
         {
             logo: appleLocation,
             location: {
@@ -33,8 +33,8 @@ export const PromoContacts = props => {
             site: 'apple.com'
         }
     )
-
-    const [contactsData, setContactsData] = useState(card)
+    // eslint-disable-next-line
+    const [contactsData, setContactsData] = useState(cards)
 
     return (
         <div className={s.container}>
