@@ -1,0 +1,81 @@
+.container
+    margin:
+        top: 50px
+        bottom: 120px
+    display: flex
+    width: 100%
+    flex-direction: column
+    .map
+        margin-top: 40px
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            @media screen and ( max-width: 700px )
+                transform: scale(1.5)
+            @media screen and ( max-width: 700px )
+                transform: scale(2)
+    .logo
+        img
+            width: 70px
+            height: 70px
+            margin-right: 15px
+        h3
+            font:
+                size: 28px
+                family: Geometria-Medium
+            line-height: 36px
+        display: flex
+        align-items: center
+        margin-bottom: 50px
+    .cards
+        display: flex
+        justify-content: space-between
+        @media screen and ( max-width: 1200px )
+            justify-content: center
+            flex-wrap: wrap
+        .card
+            @media screen and ( max-width: 1200px )
+                margin: 5px
+            display: flex
+            font:
+                size: 16px
+                family: Geometria
+            line-height: 30px
+            width: 380px
+            height: 200px
+            border: 2px dotted black
+                radius: 8px
+                color: rgba(0,0,0,0.5)
+            padding: 15px
+            a
+                position: relative
+                margin-bottom: 14px
+                text-decoration: none
+                color: #00D36D
+                &::after
+                    content: ''
+                    width: 100%
+                    position: absolute
+                    height: 1px
+                    background: #00D36D
+                    left: 0
+                    bottom: 0
+            .cardImg
+                margin-right: 15px
+            .cardMain
+                .cardMetro
+                    display: flex
+                    width: 100%
+                    div
+                        display: flex
+                        width: 50%
+                        height: fit-content
+                        align-items: center
+                        img
+                            width: 20px
+                            height: 15px
+                            margin-right: 5px
+                
+                            
+        
