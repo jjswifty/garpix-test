@@ -11,9 +11,88 @@
         background: white
         display: flex
         flex-direction: column
-        .img
+        font-family: Geometria
+        padding: 0 50px 50px 50px
+    
+
+        .date
+            margin: 20px auto 40px auto
+            color: rgba(0,0,0,0.5)
+            font-family: Geometria-Medium
+            line-height: 36px
+        .tradeInfo
+            p
+                font-size: 18px
+            ul
+                list-style: disc
+                color: rgba(0,0,0,0.5)
+                padding: 25px 40px
+                li
+                    font-size: 18px
+                    line-height: 30px
+                    p
+                        color: black
+        .howTo
+            margin:
+                bottom: 12px
+                top: 20px
+            .howToTitle
+                font:
+                    family: Geometria-Bold
+                    size: 18px
+                line-height: 30px
+            div
+                ul
+                    list-style: decimal
+                    padding: 25px 40px
+                    li
+                        font-size: 18px
+                        line-height: 35px
+                        p
+                            color: black
+        .about
+            line-height: 30px
+            font-size: 18px
+            span
+                font-family: Geometria-Bold
+        .links
+            display: flex
+            flex-direction: column
+            width: fit-content
+            align-items: flex-start
+            margin:
+                top: 24px
+                bottom: 50px
+            a
+                position: relative
+                margin-bottom: 14px
+                text-decoration: none
+                color: #00D36D
+                &::after
+                    content: ''
+                    width: 100%
+                    position: absolute
+                    height: 1px
+                    background: #00D36D
+                    left: 0
+                    bottom: -2px
+        .important
+            font-size: 12px
+            color: rgba(0,0,0,0.5)
+            line-height: 15px
+            a
+                color: #00D36D
+                text-decoration: none
+    .img
+        background: white
+        width: 100%
+        border-top-left-radius: 30px
+        border-top-right-radius: 30px
+        div
+            width: 100%
+            height: 100%
             background: linear-gradient(90deg, #F76C55 0%, #DD599D 51.56%, #C250CD 100%)
             border-radius: 30px
             padding: 40px 130px
-            
+        
     
