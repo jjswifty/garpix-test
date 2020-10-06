@@ -22,11 +22,7 @@ export const Search = props => {
             </div>
             {
                 isModalOpen && (
-<<<<<<< HEAD
                     <div className={s.modalContainer}>
-=======
-                    <div>
->>>>>>> fff08b89a1a6d26a2347c2b8039d12fcaf75bcff
                         <div className={ s.overlay }></div>
                         <div className={ s.modalContentContainer }>
                             <div className={ s.modalContent }>

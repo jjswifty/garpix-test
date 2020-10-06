@@ -4,7 +4,6 @@ import Lubyanka from './../../../assets/img/promo/Lubyanka.png'
 import Mayakovskaya from './../../../assets/img/promo/Mayakovskaya.png'
 import appleLocation from './../../../assets/img/promo/apple_location.png'
 import apple from './../../../assets/img/promo/apple.png'
-import map from './../../../assets/img/promo/map.png'
 import { Map } from 'react-yandex-maps'
 
 export const PromoContacts = props => {
