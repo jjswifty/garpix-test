@@ -1,0 +1,49 @@
+.cityModal
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: absolute
+    top: 10px
+    left: -25px
+    @media screen and ( max-width: 1110px )
+        left: -50px
+    right: 0
+    bottom: 0
+    background: white
+    width: 200px
+    height: 90px
+    z-index: 10
+    background: white
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5)
+    border-radius: 10px
+    padding: 5px
+    font-size: 14px
+    .cityBox
+        position: relative
+        z-index: 20
+        .city
+            cursor: pointer
+            border: none
+                radius: 8px
+            outline: none
+            background: rgba(0,0,0,0)
+            margin: 0 auto
+            width: 90%
+            height: 37px
+            font:
+                family: Geometria
+                size: 14px
+            display: block
+        &::after
+            content: ''
+            display: block
+            width: 60%
+            height: 1px
+            background: #00D36D
+            position: absolute
+            bottom: 5px
+            left: 20%
+            transform: scale(0)
+            transition: all .3s
+        &:hover::after
+            transform: scale(1)    

@@ -1,0 +1,51 @@
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background: rgba(0, 0, 0, 0.3)
+    z-index: 50
+
+.modalContentContainer
+    position: relative
+
+.modalContent
+    background: white
+    border-radius: 5px
+    position: absolute
+    top: -50px
+    right: 0
+    bottom: 0
+    left: -350px
+    @media screen and ( max-width: 540px )
+        left: -300px
+    width: 400px
+    @media screen and ( max-width: 455px )
+        left: -280px
+    height: 80px
+    z-index: 50
+    
+.container
+    @media screen and ( max-width: 1170px )
+        margin-right: 25%
+    position: relative
+    @media screen and ( max-width: 1170px ) 
+        z-index: 55
+    .iconBlock
+        display: flex
+        align-items: center
+        z-index: 55
+        input
+            
+            cursor: pointer
+            @media screen and ( max-width: 1170px )        
+
+                z-index: 56
+            width: 24px
+            height: 24px
+            border: none
+            outline: none
+            background-color: rgba(0,0,0,0)
+            background: url('./../../../assets/img/search_icon.svg')
+                size: cover

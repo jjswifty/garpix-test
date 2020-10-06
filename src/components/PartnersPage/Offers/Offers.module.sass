@@ -1,0 +1,39 @@
+.container
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    h2
+        font:
+            size: 32px
+            family: Geometria-Medium
+        line-height: 40px
+        max-width: 715px
+        margin-bottom: 20px
+        text-align: center
+    .offersList
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        @media screen and ( max-width: 1150px )
+            justify-content: center
+    button 
+        cursor: pointer
+        font:
+            size: 18px           
+            family: Geometria
+        line-height: 28px
+        padding: 10px 20px
+        color: white
+        border: none
+            radius: 8px
+        background: #00D36D
+        outline: none
+        margin:
+            top: 40px
+            bottom: 120px
+        @media screen and ( max-width: 1150px )
+            margin: 
+                top: 20px
+                bottom: 40px

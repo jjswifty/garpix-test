@@ -1,0 +1,102 @@
+.container
+    max-height: 300px
+    @media screen and ( max-width: 550px )
+        max-height: none
+        height: auto
+    padding: 0 10px
+    background: white
+    .containerContent
+        @media screen and ( max-width: 550px )
+            flex-direction: column
+        .politicMobile
+            display: none
+            font:
+                size: 14px
+                family: Geometria
+            line-height: 16px
+            color: rgba(0,0,0,0.5)
+            a
+                color: rgba(0,0,0,0.5)
+            @media screen and ( max-width: 550px )
+                display: block
+        max-width: 1150px
+        margin: 0 auto
+        padding: 40px 0
+        height: 100%
+        display: flex
+        .contactsContainer
+            div
+                p
+                    width: 278px
+                    padding-right: 20px
+                    font:
+                        size: 14px
+                        family: Geometria
+                    line-height: 16px
+                    color: rgba(0,0,0,0.5)
+            .numInfo
+                span
+                    font:
+                        size: 32px
+                        family: Geometria-Medium
+                    line-height: 40px
+            .logoBox
+                img
+                    margin:
+                        bottom: 30px
+                        top: 55px
+                    @media screen and ( max-width: 550px )
+                        margin: 15px 0
+        .social
+            .politic
+                @media screen and ( max-width: 550px )
+                    display: none
+                p
+                    font:
+                        size: 14px
+                        family: Geometria
+                    line-height: 16px
+                    color: rgba(0,0,0,0.5)
+                    a
+                        position: relative
+                        text-decoration: none
+                        color: inherit
+                        &::after
+                            content: ''
+                            width: 100%
+                            position: absolute
+                            height: 1px
+                            background: rgba(0,0,0,0.5)
+                            left: 0
+                            bottom: 0
+            nav
+                height: auto
+                max-width: 850px
+                div
+                    a
+                        margin-right: 15px
+                        opacity: 100%
+            .socialLinks
+                display: flex
+                justify-content: space-between
+                margin: 30px 0
+                @media screen and ( max-width: 550px )
+                    flex-direction: column
+                    justify-content: center
+                div
+                    img
+                        cursor: pointer
+                .download
+                    img
+                        margin-right: 10px   
+                .media
+                    @media screen and ( max-width: 550px )
+                        margin-top: 5px
+                    img
+                        margin-left: 10px
+                        border-radius: 8px
+                        @media screen and ( max-width: 550px )
+                            margin:
+                                left: 0
+                                right: 10px
+                        

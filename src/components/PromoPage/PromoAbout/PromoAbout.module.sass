@@ -1,0 +1,106 @@
+.container
+    display: flex
+    flex-direction: column
+    .title
+        margin: 0 auto 41px auto
+        font:
+            size: 48px
+            family: Geometria-Medium
+        line-height: 52px
+    .content
+        background: white
+        display: flex
+        flex-direction: column
+        font-family: Geometria
+        padding: 0 50px 50px 50px
+        @media screen and ( max-width: 600px )
+            padding: 0 20px 10px 20px
+        .date
+            margin: 20px auto 40px auto
+            color: rgba(0,0,0,0.5)
+            font-family: Geometria-Medium
+            line-height: 36px
+            @media screen and ( max-width: 500px )
+                font-size: 18px
+        .tradeInfo
+            p
+                font-size: 18px
+            ul
+                list-style: disc
+                color: rgba(0,0,0,0.5)
+                padding: 25px 40px
+                li
+                    font-size: 18px
+                    line-height: 30px
+                    @media screen and ( max-width: 500px )
+                        font-size: 14px
+                        line-height: 20px
+                    p
+                        color: black
+        .howTo
+            margin:
+                bottom: 12px
+                top: 20px
+            .howToTitle
+                font:
+                    family: Geometria-Bold
+                    size: 18px
+                line-height: 30px
+                @media screen and ( max-width: 500px )
+                    font-size: 14px
+                    line-height: 20px
+            div
+                ul
+                    list-style: decimal
+                    padding: 25px 40px
+                    li
+                        font-size: 18px
+                        line-height: 35px
+                        @media screen and ( max-width: 500px )
+                            font-size: 14px
+                            line-height: 20px
+                        p
+                            color: black
+        .about
+            line-height: 30px
+            font-size: 18px
+            span
+                font-family: Geometria-Bold
+        .links
+            display: flex
+            flex-direction: column
+            width: fit-content
+            align-items: flex-start
+            margin:
+                top: 24px
+                bottom: 50px
+            a
+                margin-bottom: 14px
+
+                color: #00D36D
+                
+        .important
+            font-size: 12px
+            color: rgba(0,0,0,0.5)
+            line-height: 15px
+            a
+                color: #00D36D
+                text-decoration: none
+    .img
+        background: white
+        width: 100%
+        border-top-left-radius: 30px
+        border-top-right-radius: 30px
+        div
+            width: 100%
+            height: 100%
+            background: linear-gradient(90deg, #F76C55 0%, #DD599D 51.56%, #C250CD 100%)
+            border-radius: 30px
+            padding: 40px 130px
+            @media screen and ( max-width: 700px )
+                padding: 20px 
+            img
+                width: 100%
+                height: 100%
+        
+    
